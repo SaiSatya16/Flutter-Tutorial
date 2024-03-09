@@ -1,0 +1,12 @@
+com.example.flutter.testdrive.test_drive.app-jetified-window-1.0.0-beta04-0 /Users/saisatyajonnalagadda/.gradle/caches/transforms-3/05afbc50c9d5c51966c5374f153362bd/transformed/jetified-window-1.0.0-beta04/res
+com.example.flutter.testdrive.test_drive.app-core-1.6.0-1 /Users/saisatyajonnalagadda/.gradle/caches/transforms-3/101e8b389cb95798a7d32ea8dbc0126f/transformed/core-1.6.0/res
+com.example.flutter.testdrive.test_drive.app-jetified-window-java-1.0.0-beta04-2 /Users/saisatyajonnalagadda/.gradle/caches/transforms-3/a2d5f98bb763a24d25b760f2ecad7a7e/transformed/jetified-window-java-1.0.0-beta04/res
+com.example.flutter.testdrive.test_drive.app-jetified-annotation-experimental-1.1.0-3 /Users/saisatyajonnalagadda/.gradle/caches/transforms-3/ae2073573988c210f76aee6cffb0c971/transformed/jetified-annotation-experimental-1.1.0/res
+com.example.flutter.testdrive.test_drive.app-debug-4 /Users/saisatyajonnalagadda/Documents/satya/Flutter-Tutorials/android/app/src/debug/res
+com.example.flutter.testdrive.test_drive.app-main-5 /Users/saisatyajonnalagadda/Documents/satya/Flutter-Tutorials/android/app/src/main/res
+com.example.flutter.testdrive.test_drive.app-pngs-6 /Users/saisatyajonnalagadda/Documents/satya/Flutter-Tutorials/build/app/generated/res/pngs/debug
+com.example.flutter.testdrive.test_drive.app-resValues-7 /Users/saisatyajonnalagadda/Documents/satya/Flutter-Tutorials/build/app/generated/res/resValues/debug
+com.example.flutter.testdrive.test_drive.app-rs-8 /Users/saisatyajonnalagadda/Documents/satya/Flutter-Tutorials/build/app/generated/res/rs/debug
+com.example.flutter.testdrive.test_drive.app-mergeDebugResources-9 /Users/saisatyajonnalagadda/Documents/satya/Flutter-Tutorials/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
+com.example.flutter.testdrive.test_drive.app-mergeDebugResources-10 /Users/saisatyajonnalagadda/Documents/satya/Flutter-Tutorials/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+com.example.flutter.testdrive.test_drive.app-merged_res-11 /Users/saisatyajonnalagadda/Documents/satya/Flutter-Tutorials/build/app/intermediates/merged_res/debug
