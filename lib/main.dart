@@ -48,4 +48,92 @@ class _nameState extends State<firstPage> {
           child: currentIndex == 0
               ? Container(
                   width: double.infinity,
-                  h
+                  height: double.infinity,
+                  color: Colors.grey[200],
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green,
+                          foregroundColor: Colors.white,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            buttonName = 'Clicked';
+                          });
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (BuildContext context) {
+                            return const secondPage();
+                          }));
+                        },
+                        child: Text(buttonName),
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          foregroundColor: Colors.red,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            buttonName2 = 'Clicked 2';
+                          });
+                        },
+                        child: Text(buttonName2),
+                      ),
+                    ],
+                  ),
+                )
+              : Image.asset('images/mango.png'),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.document_scanner_outlined),
+              label: 'Document Manager',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.question_answer_outlined),
+              label: 'FAQs',
+            ),
+          ],
+          currentIndex: currentIndex,
+          onTap: (int index) {
+            setState(() {
+              currentIndex = index;
+            });
+          },
+        ));
+  }
+}
+
+class secondPage extends StatelessWidget {
+  const secondPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: const Text('Second Page'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.green,
+            foregroundColor: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: const Text('Go Back'),
+        ),
+      ),
+    );
+  }
+}
