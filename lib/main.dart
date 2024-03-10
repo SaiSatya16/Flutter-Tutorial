@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,29 +20,32 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-            title: const Text('Flutter Demo Home Page'),
-          ),
-          body: const Text('Hello, Satya!'),
-          bottomNavigationBar: BottomNavigationBar(
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Home',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.document_scanner_outlined),
-                label: 'Document Manager',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.question_answer_outlined),
-                label: 'FAQs',
-              ),
-            ],
-          )),
+      home: firstPage(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
+
+class firstPage extends StatefulWidget {
+  const firstPage({super.key});
+
+  @override
+  State<firstPage> createState() => _nameState();
+}
+
+class _nameState extends State<firstPage> {
+  String buttonName = 'Click Me';
+  String buttonName2 = 'Click Me 2';
+  int currentIndex = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: const Text('Flutter Demo'),
+        ),
+        body: Center(
+          child: currentIndex == 0
+              ? Container(
+                  width: double.infinity,
+                  h
