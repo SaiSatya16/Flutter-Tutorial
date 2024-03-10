@@ -1,4 +1,0 @@
-#Sun Mar 10 02:08:37 IST 2024
-base.0=/Users/saisatyajonnalagadda/Documents/satya/Flutter-Tutorials/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
