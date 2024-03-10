@@ -28,12 +28,12 @@ class MyApp extends StatelessWidget {
                 label: 'Home',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.business),
-                label: 'Business',
+                icon: Icon(Icons.document_scanner_outlined),
+                label: 'Document Manager',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.school),
-                label: 'School',
+                icon: Icon(Icons.question_answer_outlined),
+                label: 'FAQs',
               ),
             ],
           )),
