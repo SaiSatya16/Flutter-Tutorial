@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'secondPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -37,6 +38,7 @@ class _nameState extends State<firstPage> {
   String buttonName = 'Click Me';
   String buttonName2 = 'Click Me 2';
   int currentIndex = 0;
+  bool isClicked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,9 +66,7 @@ class _nameState extends State<firstPage> {
                             buttonName = 'Clicked';
                           });
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (BuildContext context) {
-                            return const secondPage();
-                          }));
+                              builder: (BuildContext context) => secondPage()));
                         },
                         child: Text(buttonName),
                       ),
@@ -85,7 +85,16 @@ class _nameState extends State<firstPage> {
                     ],
                   ),
                 )
-              : Image.asset('images/mango.png'),
+              : GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      isClicked = !isClicked;
+                    });
+                  },
+                  child: isClicked
+                      ? Image.asset('images/mango.png')
+                      : Image.asset('images/apple.png'),
+                ),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
@@ -109,31 +118,5 @@ class _nameState extends State<firstPage> {
             });
           },
         ));
-  }
-}
-
-class secondPage extends StatelessWidget {
-  const secondPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Second Page'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.green,
-            foregroundColor: Colors.white,
-          ),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          child: const Text('Go Back'),
-        ),
-      ),
-    );
   }
 }
